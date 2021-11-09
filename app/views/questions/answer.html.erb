@@ -1,0 +1,28 @@
+<%# <div class="question">
+<%= @question<br>
+<em>-You</em>
+</div>
+<div class="answer">
+<%= @answer<br> %>
+<%# <em>-Your coach</em> %>
+<%# </div> %>
+<%# <div><%= link_to "Ask another question", '/ask'</div> %>
+
+
+<blockquote>
+  <p>
+    <% if @question.blank? %>
+      <% 😶 %>
+    <% else %>
+      <%= @question %>
+    <% end %>
+  </p>
+  <cite>You</cite>
+</blockquote>
+
+<blockquote class="coach">
+  <p><%= @answer %></p>
+  <cite>Your coach</cite>
+</blockquote>
+
+<%= link_to "Ask a new question", ask_path %>
